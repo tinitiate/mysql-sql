@@ -1,0 +1,52 @@
+-- >---
+-- >YamlDesc: DATA-TYPES
+-- >Title: MySQL Datatypes
+-- >MetaDescription: 'MySQL datatypes'
+-- >MetaKeywords: 'MySQL data types int, number, varchar2, clob, blob, example code, tutorials'
+-- >Author: Venkata Bhattaram / tinitiate.com
+-- >ContentName: mysql-datatypes
+-- >---
+
+-- ># Data Types
+-- >* They are the type of data that can be stored in Columns and variables
+-- >* data such as String, number, date.
+
+-- >## Numeric Datatypes
+-- >* TYPE          MIN VALUE               MAX VALUE
+-- >* TINYINT       -128                    127
+-- >*               0                       255
+-- >* SMALLINT      -32768                  32767
+-- >*               0                       65535
+-- >* MEDIUMINT     -8388608                8388607
+-- >*               0                       16777215
+-- >* INTEGER       -2147483648             2147483647
+-- >*               0                       4294967295
+-- >* BIGINT        -9223372036854775808    9223372036854775807
+-- >*               0                       18446744073709551615
+
+-- >## Decimal Datatypes
+-- >* TYPE          MIN VALUE                   MAX VALUE
+-- >* DECIMAL      -1.7976931348623157E+308     -2.2250738585072014E-308
+-- >* FLOAT         2.2250738585072014E-308     1.7976931348623157E+308.
+-- >* In the decimal data, the value before the point(.) is called character and the value after
+-- >  the point(.) is the mantissa.
+-- >* For example DECIMAL(7,3) = 9999.999
+-- >* Total length is SEVEN (There are SEVEN 9's) and the POINT(.) is after the
+-- >  4th character.
+
+-- >## String Datatypes
+-- >* TYPE                          VALUE OF M RANGE
+-- >* CHAR(M)                       0 <= M <= 255
+-- >  The CHAR is fixed length, meaning if the value is less than the specified
+-- >  length then SPACES are inserted upto the MAX specified length.
+-- >* BINARY(M)                     0 <= M <= 255
+-- >* VARCHAR(M) / VARBINARY(M)     0 <= M <= 65,535
+-- >* TINYBLOB, TINYTEXT            255 Characters/Bytes
+-- >* BLOB, TEXT                    UPTO 65535 Characters/Bytes
+-- >* MEDIUMBLOB, MEDIUMTEXT        UPTO 16777215 Characters/Bytes
+-- >* LONGBLOB, LONGTEXT            UPTO 4294967295 Characters/Bytes
+
+-- >## Other Data Types
+-- >* DATE TIME DATETIME TIMESTAMP YEAR
+-- >* JSON
+-- >* XML(Stored as TEXT)
