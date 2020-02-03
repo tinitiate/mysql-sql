@@ -20,6 +20,7 @@ create table csv_load_test (
    ,timestamp_data  timestamp      null
    ,primary key (id)
 );
+```
 
 
 * CSV file to load
