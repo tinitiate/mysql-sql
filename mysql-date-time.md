@@ -1,11 +1,11 @@
 ---
-YamlDesc: CONTENT-ARTICLE
-Title: MySQL Date and Time
+YamlDesc:        CONTENT-ARTICLE
+Title:           MySQL Date and Time
 MetaDescription: MySQL, Date, DateTime, TimeStamp
-MetaKeywords: MySQL, Date, DateTime, TimeStamp
-Author: (c) Venkata Bhattaram / www.github.com/tinitiate
-Contact: **syntaxboard@gmail.com**
-ContentName: mysql-date-time
+MetaKeywords:    MySQL, Date, DateTime, TimeStamp
+Author:          (c) Venkata Bhattaram / www.github.com/tinitiate
+Contact:         syntaxboard@gmail.com
+ContentName:     mysql-date-time
 ---
 
 # MySQL Date, DateTime and TimeStamp
