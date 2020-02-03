@@ -1,3 +1,3 @@
 # mysql-sql
-> Venkata Bhattaram \n
-> syntaxboard@gmail.com
+> By Venkata Bhattaram
+* syntaxboard@gmail.com
