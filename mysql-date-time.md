@@ -2,7 +2,7 @@
 Title:           MySQL Date and Time
 MetaKeywords:    MySQL, Date, DateTime, TimeStamp
 Author:          (c) Venkata Bhattaram / www.github.com/tinitiate
-Contact:         **syntaxboard@gmail.com**
+Contact:         syntaxboard@gmail.com
 ContentName:     mysql-date-time
 ---
 
