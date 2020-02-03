@@ -1,7 +1,8 @@
 # MYSQL - Load data from external CSV file to a Table
 
-* Here we create a table with various datatypes
+* Steps to load data in CSV file to a MYSQL Table
 
+* **STEP 1.** Create the table
 ```sql
 -- Create Database
 -- -----------------------------------------------------------------------------
@@ -23,8 +24,9 @@ create table csv_load_test (
 ```
 
 
-* CSV file to load
-* Save the below contents to  `load_test.csv` file and place it in a directory.
+* **STEP 2.** Prepare the CSV file to load
+* Save the below contents to `load_test.csv` file and place it in a directory,
+  Here we save the file to c:\tinitiate\data\load_test.csv
 ```
 1,'AAA','This is AAA',100.2,'01-01-2020','01-01-2020 16:20:23','01-01-2020 16:20:23 GMT'
 2,'BBB','This is BBB',100.2,'01-01-2020','01-01-2020 16:20:23','01-01-2020 16:20:23 IST'
@@ -32,9 +34,10 @@ create table csv_load_test (
 ```
 
 
-* Load Data Statement from CSV file
+* **STEP 3.** Prepare the Load Data Statement from CSV file
+* We specify the CSV file and its folder, make sure to have the same name.
 ```sql
-load data infile 'c:/data/load_test.csv' into table csv_load_test
+load data infile 'c:/tinitiate/data/load_test.csv' into table csv_load_test
 fields terminated by ',' enclosed by "'" lines terminated by '\n'
 ignore 1 rows;
 (id, string_data, text_data, decimal_data, @date_data, @datetime_data, @timestamp_data)
@@ -44,7 +47,7 @@ SET timestamp_data = unix_timestamp(STR_TO_DATE(@timestamp_data, '%m-%d-%Y %h:%i
 ```
 
 
-* Run the Load Data Statement
+* **STEP 4.** Run the Load Data Statement
 * Check the Table for data
 ```sql
 select * from csv_load_test;
