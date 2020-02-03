@@ -1,3 +1,3 @@
 # mysql-sql
 > By Venkata Bhattaram
-* syntaxboard@gmail.com
+* Training and Project support contact **syntaxboard@gmail.com**
