@@ -10,7 +10,7 @@ ContentName: mysql-date-time
 
 # MySQL Date, DateTime and TimeStamp
 * Format and Its description
-```
+```sql
 %Y      YYYY        4-digit year
 %y      YY          2-digit year
 %b      MON         Abbreviated month (Jan - Dec)
@@ -27,7 +27,7 @@ ContentName: mysql-date-time
 
 ## Create Test data
 * Create Date Data Table
-```
+```sql
 -- Create Table
 -- -----------------------------------------------------------------------------
 create table date_time_test (
@@ -52,7 +52,7 @@ insert into date_time_test values
 ```
 
 * Select Data from Date Table
-```
+```sql
 select   hour(col_dt)
         ,minute(col_dt)
         ,second(col_dt)
@@ -66,7 +66,7 @@ from    date_time_test;
 ```
 
 * **ADDDATE**
-```
+```sql
 -- Add 15 Seconds
 SELECT ADDDATE("2020-01-01 01:00:00", INTERVAL 15 SECOND);
 
@@ -98,14 +98,14 @@ SELECT ADDDATE("2020-01-01 01:00:00", INTERVAL -2 MONTH);
 ```
 
 * DATEDIFF() function returns the number of days between two date values.
-```
+```sql
 SELECT DATEDIFF("2020-01-01 01:00:00", "2020-01-01 00:30:00");
 
 SELECT DATEDIFF("2020-02-01 01:00:00", "2020-01-01 01:00:00");
 ```
 
 * TIMEDIFF() Returns the difference between two time expressions.
-```
+```sql
 SELECT TIMEDIFF("15:10:10", "10:10:10");
 
 SELECT TIMEDIFF("11:30:00", "09:10:10");
