@@ -9,17 +9,17 @@ create table csv_load_test (
     id              int            not null
    ,string_data     varchar(255)   not null
    ,text_data       text           null
-   ,decimal_data    decimal(10,2)  null,
-   ,date_data       date           null,
-   ,datetime_data   date           null,
-   ,timestamp_data  date           null,
+   ,decimal_data    decimal(10,2)  null
+   ,date_data       date           null
+   ,datetime_data   date           null
+   ,timestamp_data  date           null
    ,primary key (id)
 );
 
 ```
 
 * Load Data from CSV file
-```
+```sql
 load data infile 'c:/data/load_test.csv' into table csv_load_test
 fields terminated by ',' enclosed by "'" lines terminated by '\n'
 ignore 1 rows;
