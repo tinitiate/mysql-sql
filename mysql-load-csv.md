@@ -55,7 +55,7 @@ create table csv_load_test (
 ```sql
 load data local infile 'E:/code/CODING_DataAnalyst/data.csv' into table csv_load_test 
 fields terminated by ',' enclosed by "'" lines terminated by '\n'
-(id, string_data, text_data, decimal_data, @date_data, @datetime_data, @timestamp_data)
+(id, string_data, text_data, decimal_data, @date_data, @datetime_data)
 SET date_data = STR_TO_DATE(@date_data, '%m-%d-%Y'),
     datetime_data = STR_TO_DATE(@datetime_data, '%m-%d-%Y %H:%i:%s');
     
