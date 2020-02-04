@@ -18,7 +18,6 @@ create table csv_load_test (
    ,decimal_data    decimal(10,2)  null
    ,date_data       date           null
    ,datetime_data   datetime       null
-   ,timestamp_data  timestamp      null
    ,primary key (id)
 );
 ```
@@ -28,22 +27,22 @@ create table csv_load_test (
 * Save the below contents to `load_test.csv` file and place it in a directory,
   Here we save the file to c:\tinitiate\data\load_test.csv
 ```
-1,'AAA','This is AAA',100.2,'01-01-2020','01-01-2020 16:20:23','01-01-2020 16:20:23 GMT'
-2,'BBB','This is BBB',100.2,'01-01-2020','01-01-2020 16:20:23','01-01-2020 16:20:23 IST'
-3,'CCC','This is CCC',100.2,'01-01-2020','01-01-2020 16:20:23','01-01-2020 16:20:23 EST'
+1,'AAA','This is AAA',100.2,'01-01-2020','01-01-2020 16:20:23'
+2,'BBB','This is BBB',100.2,'01-01-2020','01-01-2020 16:20:23'
+3,'CCC','This is CCC',100.2,'01-01-2020','01-01-2020 16:20:23'
 ```
 
 
 * **STEP 3.** Prepare the Load Data Statement from CSV file
 * We specify the CSV file and its folder, make sure to have the same name.
 ```sql
-load data infile 'c:/tinitiate/data/load_test.csv' into table csv_load_test
+load data local infile 'E:/code/CODING_DataAnalyst/data.csv' into table csv_load_test 
 fields terminated by ',' enclosed by "'" lines terminated by '\n'
-ignore 1 rows;
 (id, string_data, text_data, decimal_data, @date_data, @datetime_data, @timestamp_data)
-SET date_data = STR_TO_DATE(@date_data, '%m-%d-%Y');
-SET datetime_data = STR_TO_DATE(@datetime_data, '%m-%d-%Y %h:%i%:s%');
-SET timestamp_data = unix_timestamp(STR_TO_DATE(@timestamp_data, '%m-%d-%Y %h:%i%:s% GMT'));
+SET date_data = STR_TO_DATE(@date_data, '%m-%d-%Y'),
+    datetime_data = STR_TO_DATE(@datetime_data, '%m-%d-%Y %H:%i:%s');
+    
+show warnings;
 ```
 
 
