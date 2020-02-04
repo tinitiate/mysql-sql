@@ -1,6 +1,23 @@
 # MYSQL - Load data from external CSV file to a Table
 
 * Steps to load data in CSV file to a MYSQL Table
+* **Check Server Parameter Settings**
+```
+SHOW VARIABLES LIKE "%version%";
+SET GLOBAL local_infile = "ON";
+
+SHOW VARIABLES LIKE 'local_infile';
+SHOW VARIABLES LIKE "secure_file_priv";
+
+-- ADD secure_file_priv LOCATION to the my.ini or my.cfg file
+[mysqld]
+secure_file_priv="c:/my_folder/"
+
+Restart DB Server
+```
+
+
+
 
 * **STEP 1.** Create the table
 ```sql
