@@ -40,11 +40,12 @@ create table date_time_test (
 -- Insert Current TimeStamp, Current DateTime, Current Date
 insert into date_time_test values (current_timestamp(), now(), curdate());
 
+SET time_zone='+00:00';
 -- Insert using String to Date /  DateTime / TimeStamp functions
 insert into date_time_test values
-   ( unix_timestamp(str_to_date('2020-01-01 01:10pm', '%Y-%m-%d %h:%i%p'))  -- TimeStamp
-    ,str_to_date('2020-01-01 01:10pm', '%Y-%m-%d %h:%i%p')                  -- DateTime
-    ,str_to_date('01-01-2020','%d-%m-%Y'));                                 -- Date
+   ( str_to_date('2020-01-01 01:10:20', '%Y-%m-%d %H:%i:%s')  -- TimeStamp
+    ,str_to_date('2020-01-01 01:10:20', '%Y-%m-%d %H:%i:%s')  -- DateTime
+    ,str_to_date('01-01-2020','%d-%m-%Y'));                   -- Date
 
 -- -----------------------------------------------------------------------------
 ```
