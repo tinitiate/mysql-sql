@@ -16,6 +16,10 @@ secure_file_priv="c:/my_folder/"
 Restart DB Server
 ```
 
+After DB Restart, Run the following command in SQL WorkBench to make sure your CSV File Path is set
+```
+SHOW VARIABLES LIKE "secure_file_priv";
+```
 
 
 
@@ -53,6 +57,7 @@ create table csv_load_test (
 
 * **STEP 3.** Prepare the Load Data Statement from CSV file
 * We specify the CSV file and its folder, make sure to have the same name.
+* Run the following command in COMMAND PROMPT / Terminal, **DO NOT RUN IN SQL WORKBENCH**
 ```sql
 load data local infile 'E:/code/CODING_DataAnalyst/data.csv' into table csv_load_test 
 fields terminated by ',' enclosed by "'" lines terminated by '\r\n'
