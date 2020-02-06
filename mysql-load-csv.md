@@ -25,6 +25,7 @@ Restart DB Server
 -- -----------------------------------------------------------------------------
 create database csv_test;
 
+use datebase csv_test;
 
 -- Create a Test Table with various DataTypes
 -- -----------------------------------------------------------------------------
