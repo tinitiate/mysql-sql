@@ -29,7 +29,7 @@ SHOW VARIABLES LIKE "secure_file_priv";
 -- -----------------------------------------------------------------------------
 create database csv_test;
 
-use datebase csv_test;
+use csv_test;
 
 -- Create a Test Table with various DataTypes
 -- -----------------------------------------------------------------------------
