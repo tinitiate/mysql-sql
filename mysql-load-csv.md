@@ -10,8 +10,13 @@ SHOW VARIABLES LIKE 'local_infile';
 SHOW VARIABLES LIKE "secure_file_priv";
 
 -- ADD secure_file_priv LOCATION to the my.ini or my.cfg file
+[client]
+loose-local-infile=1 
+
 [mysqld]
 secure_file_priv="c:/my_folder/"
+loose-local-infile=1 
+-------------------------------------
 
 Restart DB Server
 ```
